@@ -1,2 +1,9 @@
 ﻿  Algorithm_Implementation.cpp
-  Algorithm_Implementation.vcxproj -> C:\Users\addinedu\Desktop\Algorithm_Implementation\x64\Debug\Algorithm_Implementation.exe
+C:\Users\exon0\OneDrive\Desktop\Algorithm_Implementation\Algorithm_Implementation\MergeSort.h(16,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Algorithm_Implementation.cpp')
+  C:\Users\exon0\OneDrive\Desktop\Algorithm_Implementation\Algorithm_Implementation\MergeSort.h(16,10):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\exon0\OneDrive\Desktop\Algorithm_Implementation\Algorithm_Implementation\Algorithm_Implementation.cpp(40,2):
+  	see reference to function template instantiation 'void MergeSort<int>(std::vector<int,std::allocator<int>> &)' being compiled
+  
+  Algorithm_Implementation.vcxproj -> C:\Users\exon0\OneDrive\Desktop\Algorithm_Implementation\x64\Debug\Algorithm_Implementation.exe
