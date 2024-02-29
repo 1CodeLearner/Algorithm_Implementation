@@ -32,6 +32,12 @@ void SelectionSortExample(int* _ptrArr, int _size)
 	std::cout << std::endl;
 }
 
+int BinarySearch() 
+{
+	
+}
+
+
 int main()
 {
 	SelectionSortExample(unsortedInt, size);
@@ -42,4 +48,9 @@ int main()
 	{
 		std::cout << *i << " ";
 	}
+
+	
+	int array[] = {10,12,14,16,2,4,6,8};
+	std::cout << BinarySearch(array) << std::endl;
+
 }
