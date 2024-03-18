@@ -1,10 +1,6 @@
 #include <iostream>
 #include "MergeSort.h"
 #include "QuickSort.h"
-int unsortedInt[] = { 1, 6,3, 5, 7, 1,8, 12,4, 6 }; //7, 7,7, 2,3,4, 6,7,7, 8,6,8,9,0 ,1, 2,12,6};
-int size = 10;
-
-
 
 void SelectionSortExample(int* _ptrArr, int _size)
 {
@@ -34,9 +30,11 @@ void SelectionSortExample(int* _ptrArr, int _size)
 
 int BinarySearch() 
 {
-	
+	return 0;
 }
 
+int unsortedInt[] = { 1, 6,3, 5, 7, 1,8, 12,4, 6 }; //7, 7,7, 2,3,4, 6,7,7, 8,6,8,9,0 ,1, 2,12,6};
+int size = 10;
 
 int main()
 {
@@ -51,7 +49,7 @@ int main()
 	}
 
 	
-	int array[] = {10,12,14,16,2,4,6,8};
-	std::cout << BinarySearch(array) << std::endl;
+	//int array[] = {10,12,14,16,2,4,6,8};
+	//std::cout << BinarySearch(array) << std::endl;
 
 }
