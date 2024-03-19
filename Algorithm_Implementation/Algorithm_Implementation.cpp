@@ -2,6 +2,8 @@
 #include "SelectionSort.h"
 #include "MergeSort.h"
 #include "QuickSort.h"
+#include "InsertionSort.h"
+#include <random>
 
 int BinarySearch()
 {
@@ -19,13 +21,21 @@ void Print(std::vector<int> v)
 
 int main()
 {
-	std::vector<int> v = { 1, 6,3, 5, 7, 1,8, 12,4, 6 }; //7, 7,7, 2,3,4, 6,7,7, 8,6,8,9,0 ,1, 2,12,6};
+	std::mt19937 mt(std::random_device{}());
+	std::uniform_int_distribution<int> dist(2,50);
+	int max = dist(mt);
+	std::vector<int> v;
+	for (int i = 0; i < max; ++i) 
+	{
+		v.push_back(dist(mt));
+	}
 
 	//SelectionSortExample(v);
 
 	//MergeSort(values);
 	//QuickSort(values, 0, values.size() - 1);
-	
+	Insertion(v);
+
 	Print(v);
 
 
