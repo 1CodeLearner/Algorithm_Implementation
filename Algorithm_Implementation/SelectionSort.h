@@ -1,24 +1,22 @@
 #pragma once
 #include <vector>
 
-inline void SelectionSortExample(std::vector<int>& v)
+inline void SelectionSort(std::vector<int>& v)
 {
-	//max value first
-	for (int i = 0; i < v.size() - 1; ++i)
+	for (int i = 0; i < v.size() - 1; ++i) 
 	{
-		int value = v[i];
-		int valueIndex = i;
-		for (int j = i + 1; j < v.size(); ++j)
+		int min = v[i];
+		int index = i;
+		for (int j = i + 1; j < v.size(); ++j) 
 		{
-			if (value < v[j])
+			//if value is less than current lowest value
+			if (v[j] < min) 
 			{
-				value = v[j];
-				valueIndex = j;
+				min = v[j];
+				index = j;
 			}
 		}
-		int temp = v[i];
-		v[i] = value;
-		v[valueIndex] = temp;
+		std::swap(v[i], v[index]);
 	}
 }
 

@@ -30,11 +30,11 @@ int main()
 		v.push_back(dist(mt));
 	}
 
-	//SelectionSortExample(v);
+	SelectionSort(v);
 
 	//MergeSort(values);
 	//QuickSort(values, 0, values.size() - 1);
-	Insertion(v);
+	//Insertion(v);
 
 	Print(v);
 
