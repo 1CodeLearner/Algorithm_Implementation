@@ -10,24 +10,50 @@ void Merge(std::vector<T>& left, std::vector<T>& right, std::vector<T>& output);
 template<typename T>
 void MergeSort(std::vector<T>& values)
 {
-	if (values.size() < 2)
-		return;
+	if(values.size() < 2) return;
 
-	int max = values.size();
-	int min = 0;
-
-	int mid = (max - min) / 2 + min;
+	int mid = values.size() / 2;
 
 	std::vector<T> left(mid);
-	std::vector<T> right(max - mid);
+	std::vector<T> right(values.size() - mid);
 
 	std::copy(values.begin(), values.begin() + mid, left.begin());
-	std::copy(values.begin() + mid, values.begin() + max, right.begin());
+	std::copy(values.begin() + mid, values.end(), right.begin());
 
-	MergeSort(left);
+	//for (int i = 0; i < mid; ++i) {
+	//	left[i] = values[i];
+	//}
+	//for (int i = mid; i < values.size(); ++i) {
+	//	right[i - mid] = values[i];
+	//}
+
+	MergeSort(left); 
 	MergeSort(right);
 
 	Merge(left, right, values);
+
+
+	//if (values.size() < 2)
+	//	return;
+
+	//int max = values.size();
+	//int min = 0;
+
+	//int mid = (max - min) / 2 + min;
+
+	//std::vector<T> left(mid);
+	//std::vector<T> right(max - mid);
+
+	//std::copy(values.begin(), values.begin() + mid, left.begin());
+	//std::copy(values.begin() + mid, values.begin() + max, right.begin());
+
+	//MergeSort(left);
+	//MergeSort(right);
+
+	//Merge(left, right, values);
+
+
+
 }
 
 template<typename T>

@@ -25,15 +25,24 @@ int main()
 	std::uniform_int_distribution<int> dist(2,50);
 	int max = dist(mt);
 	std::vector<int> v;
-	for (int i = 0; i < max; ++i) 
-	{
-		v.push_back(dist(mt));
-	}
+	//for (int i = 0; i < max; ++i) 
+	//{
+	//	v.push_back(dist(mt));
+	//}
+	
+	v.push_back(5);
+	v.push_back(5);
+	v.push_back(2);
+	v.push_back(1);
+	v.push_back(6);
+	v.push_back(9);
+	v.push_back(7);
+	v.push_back(4);
 
-	SelectionSort(v);
+	//SelectionSort(v);
 
-	//MergeSort(values);
-	//QuickSort(values, 0, values.size() - 1);
+	//MergeSort(v);
+	//QuickSort(v, 0, v.size() - 1);
 	//Insertion(v);
 
 	Print(v);

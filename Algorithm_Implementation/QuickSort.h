@@ -6,6 +6,7 @@
 int Partition(std::vector<int>& Vector, int low, int high);
 int RandomizedPartition(std::vector<int>& Vector, int low, int high);
 int SecondPartition(std::vector<int>& Vector, int low, int high);
+int PracticePartition(std::vector<int>& v, int low, int high);
 
 inline void QuickSort(std::vector<int>& Vector, int low, int high )
 {
@@ -14,10 +15,31 @@ inline void QuickSort(std::vector<int>& Vector, int low, int high )
 		return; 
 	}
 
-	int pivot = SecondPartition(Vector, low, high);
+	int pivot = PracticePartition(Vector, low, high);
 
 	QuickSort(Vector, low, pivot - 1);
 	QuickSort(Vector, pivot + 1, high);
+}
+
+inline int PracticePartition(std::vector<int>& v, int low, int high) 
+{
+	std::mt19937 mt(std::random_device{}());
+	std::uniform_int_distribution<int> dist(low, high);
+	int index = dist(mt);
+
+	std::swap(v[index], v[high]);
+
+	int pivotIndex = 0;
+	for (int i = 0; i < high; ++i) 
+	{
+		if (v[i] <= v[high]) 
+		{
+			std::swap(v[pivotIndex], v[i]);
+			pivotIndex++;
+		}
+	}
+	std::swap(v[pivotIndex], v[high]);
+	return pivotIndex;
 }
 
 inline int SecondPartition(std::vector<int>& Vector, int low, int high)
